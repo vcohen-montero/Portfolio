@@ -58,8 +58,8 @@
                     <img src="./images/dish1.jpeg" alt="Colorful dish with tomatoes" onclick="openModal(this.src)">
                 </div>
                 <div class="gallery-item">
-                    <video controls>
-                        <source src="./images/dish_vid1.mov" type="video/quicktime">
+                    <video controls preload="metadata">
+                        <source src="./images/dish_vid1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -67,8 +67,8 @@
                     <img src="./images/dish2.jpeg" alt="Roasted meat dish" onclick="openModal(this.src)">
                 </div>
                 <div class="gallery-item">
-                    <video controls>
-                        <source src="./images/dish_vid2.mov" type="video/quicktime">
+                    <video controls preload="metadata">
+                        <source src="./images/dish_vid2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -80,31 +80,6 @@
                 </div>
             </div>
         </section>
-
-        <div id="imageModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImage">
-        </div>
-
-        <script>
-            function openModal(src) {
-                var modal = document.getElementById("imageModal");
-                var modalImg = document.getElementById("modalImage");
-                modal.style.display = "flex";
-                modalImg.src = src;
-            }
-
-            function closeModal() {
-                document.getElementById("imageModal").style.display = "none";
-            }
-
-            window.onclick = function(event) {
-                var modal = document.getElementById("imageModal");
-                if (event.target == modal) {
-                    closeModal();
-                }
-            }
-        </script>
 
         <section id="contact">
             <h2>Contact Vera</h2>
