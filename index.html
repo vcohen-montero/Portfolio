@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vera Cohen - Professional Chef Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+    <header>
+        <h1>Vera Cohen's Culinary Journey</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Vera</h2>
+            <p>Vera Cohen is a bilingual culinary professional based in San Francisco, with a Culinary Arts degree and 6+ years of diverse experience in the food industry. Skilled in preparing a wide variety of cuisines, Vera excels in accommodating dietary restrictions and creating efficient, high-quality meals. Her passion lies in crafting flavorful dishes and delivering exceptional dining experiences.</p>
+        </section>
+
+        <section id="experience" class="experience-section">
+            <h2>Professional Experience</h2>
+            <ul>
+                <li class="job">
+                    <h3><strong>Sous Chef at Choice Cookz, LLC, Seattle</strong></h3>
+                    <p><time datetime="2022">2022</time> - <time datetime="2023">2023</time></p>
+                    <ul>
+                        <li>Elevated catering events through innovative menu planning</li>
+                        <li>Streamlined kitchen operations and inventory management</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <h3><strong>Line Cook at Five Iron Golf, Seattle</strong></h3>
+                    <p><time datetime="2022-02">February 2022</time> - <time datetime="2022-03">March 2022</time></p>
+                    <ul>
+                        <li>Contributed to menu innovation with new dishes</li>
+                        <li>Improved inventory processes, reducing waste in a fast-paced environment</li>
+                    </ul>
+                </li>
+                <!-- Add other work experiences similarly -->
+            </ul>
+        </section>
+
+        <section id="gallery">
+            <h2>Food Gallery</h2>
+            <p>Tap on the images to view them in full size. Tap outside the image or on the close button to exit.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./images/dish1.jpeg" alt="Colorful dish with tomatoes" onclick="openModal(this.src)">
+                </div>
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="./images/dish_vid1.mov" type="video/quicktime">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/dish2.jpeg" alt="Roasted meat dish" onclick="openModal(this.src)">
+                </div>
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="./images/dish_vid2.mov" type="video/quicktime">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/dish3.jpeg" alt="Table spread with various dishes" onclick="openModal(this.src)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/dish4.jpeg" alt="Plate with meat and vegetables" onclick="openModal(this.src)">
+                </div>
+            </div>
+        </section>
+
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <script>
+            function openModal(src) {
+                var modal = document.getElementById("imageModal");
+                var modalImg = document.getElementById("modalImage");
+                modal.style.display = "flex";
+                modalImg.src = src;
+            }
+
+            function closeModal() {
+                document.getElementById("imageModal").style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                var modal = document.getElementById("imageModal");
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+        </script>
+
+        <section id="contact">
+            <h2>Contact Vera</h2>
+            <p>Email: vcohenmontero@gmail.com</p>
+            <p>Phone: 206-605-5133</p>
+            <ul>
+                <li><a href="https://www.instagram.com/veritas_cooking/">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@veramontero333">TikTok</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Vera Cohen's Culinary Journey. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
